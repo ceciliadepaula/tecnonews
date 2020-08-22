@@ -1,0 +1,318 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+/*--------------TIPOGRAFÍAS-----------------*/
+/*--------------VARIABLES-----------------*/
+/*--------------COLOR-----------------*/
+header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  z-index: 10;
+}
+
+header .marcasuperior .logo {
+  display: inline;
+}
+
+header .marcasuperior .logo h1 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#51296C), to(#D74DC0));
+  background-image: linear-gradient(90deg, #51296C, #D74DC0);
+  font-family: "Russo One", sans-serif;
+  font-size: 3em;
+  color: #FFFFFF;
+  letter-spacing: 0.03em;
+  margin: 0px;
+  padding: 10px 5%;
+}
+
+header nav {
+  background-color: #51296C;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0px 5%;
+  padding: 0px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav ul li {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  padding: 7px 0px;
+}
+
+header nav ul li .linknav {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+header nav ul li:hover {
+  background-color: #D74DC0;
+}
+
+header nav ul li:hover .linknav {
+  font-weight: 700;
+}
+
+header .sombra {
+  position: relative;
+  top: -100px;
+  height: 100px;
+  width: 100%;
+  background-color: blue;
+  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.8);
+  z-index: -5;
+}
+
+@-webkit-keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes desaparecer {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes desaparecer {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+main .ultimasnoticias {
+  margin: 0px 5% 30px 5%;
+  position: relative;
+  top: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+}
+
+main .ultimasnoticias .noticiasimportantes {
+  width: 70%;
+  margin-right: 1%;
+  background-image: linear-gradient(135deg, #51296C, #9700FF);
+  z-index: 1;
+}
+
+main .ultimasnoticias aside {
+  background-color: #f8f3ec;
+  width: 30%;
+  margin-left: 1%;
+}
+
+.articuloppal {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
+}
+
+.articuloppal .fotonoticia {
+  width: 100%;
+  z-index: -2;
+  opacity: .5;
+}
+
+.articuloppal .infotipog {
+  position: absolute;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 69%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.articuloppal .infotipog .nombreseccion {
+  font-family: "Russo One", sans-serif;
+  color: #D74DC0;
+  margin: 3% 3% 1% 3%;
+  text-transform: uppercase;
+}
+
+.articuloppal .infotipog .titulonoticia {
+  margin: 0px 3% 3% 3%;
+  font-family: "Russo One", sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 4em;
+}
+
+.articuloppal .cuerponoticia {
+  position: absolute;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 69%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px 6%;
+  z-index: 5;
+  visibility: hidden;
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+
+.articuloppal .boton {
+  position: absolute;
+  bottom: 40px;
+  left: 25%;
+  width: 20%;
+  height: 40px;
+  background-color: #D74DC0;
+  border-radius: 40px;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: #FFFFFF;
+  padding: 10px;
+  text-align: center;
+  visibility: hidden;
+}
+
+.articuloppal:hover {
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+}
+
+.articuloppal:hover .cuerponoticia {
+  visibility: visible;
+  -webkit-animation: aparecer 5s ease;
+          animation: aparecer 5s ease;
+}
+
+.articuloppal:hover .infotipog {
+  -webkit-animation: desaparecer 1s ease;
+          animation: desaparecer 1s ease;
+  opacity: 0;
+}
+
+.articuloppal:hover .boton {
+  visibility: visible;
+  -webkit-animation: aparecer 5s ease;
+          animation: aparecer 5s ease;
+}
+
+.boton:hover {
+  font-weight: 700;
+  color: #D74DC0;
+  background-color: #FFFFFF;
+}
+
+aside {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
+}
+
+aside .tituloaside {
+  color: #f8f3ec;
+  font-family: "Russo One", sans-serif;
+  text-transform: uppercase;
+  margin: 0px;
+  padding: 8%;
+  letter-spacing: 0.03em;
+  text-align: center;
+  background-color: #51296C;
+}
+
+aside .textootras {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 80%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px;
+  margin: 0px 30px;
+}
+
+aside .textootras li {
+  list-style: none;
+}
+
+aside .textootras li .nombreseccion {
+  color: #51296C;
+  font-family: "Russo One", sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  margin: 0px 0px;
+  padding: 15px 0px 5px 0px;
+}
+
+aside .textootras li .titular {
+  font-family: "Open Sans", sans-serif;
+  color: #000000;
+  font-size: 1.2em;
+  margin: 0px 0px 10px 0px;
+}
+
+aside .textootras li hr {
+  height: 2px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: #51296C;
+  border: none;
+}
+/*# sourceMappingURL=style.css.map */
