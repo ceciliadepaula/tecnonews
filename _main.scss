@@ -16,8 +16,9 @@ main{
         top: 140px;
         display: flex;
         width: 90%;
+        /* flex-wrap: wrap; */
         .noticiasimportantes{
-            width: 70%;
+            width: 68%;
             margin-right: 1%;
             background-image: linear-gradient(135deg, $coloroscuro, $colorclaro);
             z-index: 1; 
@@ -27,17 +28,26 @@ main{
             width: 30%;
             margin-left: 1%;
         }
-    }    
+    }
+    .noticiasjerarquia2{
+        margin: 0px 5% 30px 5%;
+        position: relative;
+        top: 150px;
+        display: flex;
+        width: 90%;
+    }
 }
 
 
 .articuloppal{
     width: 100%;
-    height: 100%;
+    height: 100%;                                                      
     display: flex;
     box-shadow: 0 0 10px 0 rgba($colortexto, 0.70);
     .fotonoticia{
         width: 100%;
+        height: 100%; 
+        object-fit: cover;    
         z-index: -2;
         opacity: .5;
     } 
@@ -79,9 +89,8 @@ main{
     .boton{
         position: absolute;
         bottom: 40px; 
-        left: 25%;
-
-        width: 20%;
+        left: 20%;
+        width: 30%;
         height: 40px;
         background-color: $colormedio;
         border-radius: 40px;    
@@ -92,7 +101,6 @@ main{
         color: $colorblanco;
         padding: 10px;
         text-align: center;       
-        
         visibility: hidden;
     }
 }
@@ -171,3 +179,82 @@ aside{
         }
     }
 }
+
+
+.articulosecundario{
+    width: 32%;
+    height: 600px;
+    box-shadow: 0 0 10px 0 rgba($colortexto, 0.70);
+    background-color: $colorcrema;
+    display: flex;
+    flex-direction: column;
+    .fondolila{
+        background-image: linear-gradient(135deg, $coloroscuro, $colorclaro);
+        width: 100%;
+        max-height: 220px;
+        margin: 0px;
+        padding: 0px;     
+        .fotonoticia{
+            align-self: flex-start;
+            width: 100%;
+            max-height: 220px;
+            object-fit: cover;
+            opacity: .5;
+        }
+    }
+    .nombreseccion{
+        font-family: $fuentemarca;
+        font-size: 1em;
+        color: $colormedio;
+        margin: 5% 5% 2% 5%;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    .titulonoticia{
+        margin: 0px 5% 0px 5%;
+        font-size: 1.3em;
+        font-family: $fuentetextos;
+    }
+    hr{
+        height: 2px;
+        width: 90%;
+        margin: 3% 5% 3% 5%;
+        padding: 0px;
+        background-color: $coloroscuro;
+        border: none;
+
+    }
+    .cuerponoticia{
+        margin: 1% 5% 0% 5%;
+        font-family: $fuentetextos;
+        font-size: 1em;
+    }
+    .contenedorboton{
+        position: absolute;
+        bottom: 0;
+        width: 32%;
+        display: flex;
+        .boton{
+            font-family: $fuentetextos;
+            font-size: .9em;
+            height: 40px;
+            width: 100%;
+            margin: 5%;
+            background-color: $colormedio;
+            border-radius: 40px;    
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $colorblanco;
+            padding: 10px;
+            text-align: center;    
+        }       
+    }
+    .boton:hover{
+        background-color: $coloroscuro;
+    }         
+}
+
+.a1, .a2{
+    margin-right: 2%;
+}
+

@@ -1,0 +1,19 @@
+footer{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 50px;
+    background-color: $coloroscuro;
+
+    position: relative;
+    top: 150px;
+    box-shadow: 0 0 10px 0 rgba($colortexto, 0.8);
+    p{
+        font-family: $fuentetextos;
+        color: $colorblanco;
+        font-size: 0.9em;
+        align-self: center;
+    }
+
+}
