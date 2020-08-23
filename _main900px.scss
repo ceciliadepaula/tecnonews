@@ -3,21 +3,17 @@
         .noticiasimportantes{
             display: flex;
             flex-direction: row;
-            width: 90%;
-                                        max-height: 100%;
-                                        position: relative;
+            width: 90%;             
+            height: 100%;
             .articuloppal{
                 width: 68%;
-                max-height: 100%;
-                
-                                            
+                height: 100%;        
                 margin: 0px 2% 0px 0px;
-                
             }
             aside{
-                width: 30%;
-                height: 100%;
+                width: 30%;                    
                 margin: 0px;
+                height: 100%; 
             }
         }           
     .noticiasjerarquia2{
@@ -61,13 +57,12 @@
         
     
     aside{
-        box-shadow: 0 0 10px 0 rgba($colortexto, 0.70);                                 
+        box-shadow: 0 0 10px 0 rgba($colortexto, 0.70);                              
         .textootras{
             margin: 0px 30px;
             li{        
                 .titular{
                     margin: 0px 0px 10px 0px;
-                    
                 }
             }
         }
