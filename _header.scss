@@ -6,6 +6,7 @@ header{
     .marcasuperior{
         .logo{
             display: inline;
+            text-align: center;
             h1{
                 background-image: linear-gradient(90deg, $coloroscuro, $colormedio);
                 font-family: $fuentemarca;
@@ -16,9 +17,6 @@ header{
                 padding: 10px 5%;
             }
         }
-        .iconos{
-
-        }
     }
     nav{
         background-color: $coloroscuro;
@@ -28,6 +26,8 @@ header{
             margin: 0px 5%;
             padding: 0px;
             justify-content: space-between;
+           
+                                        /* flex-wrap: wrap; */
             li{
                 font-family: $fuentetextos;
                 font-weight: $semibold;
@@ -56,4 +56,4 @@ header{
         box-shadow: 0 0 12px 0 rgba($colortexto, 0.8);
         z-index: -5;
     }
-}
+} 
