@@ -74,8 +74,8 @@ main{
     .cuerponoticia{
         position: absolute;
         color: $colorblanco;
-        display: flex;
-        flex-direction: column;
+        /* display: flex;
+        flex-direction: column; */
         width: 69%;
         align-self: center;  
         text-align: center;
@@ -84,7 +84,11 @@ main{
         z-index: 5;
         visibility: hidden;
         font-size: 1.2em;
-        line-height: 1.6em;
+        line-height: 1.6em;        
+        span{
+            color: $colormedio;
+            font-weight: $bold;
+        }
     }
     .boton{
         position: absolute;
