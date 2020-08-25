@@ -59,7 +59,7 @@ main{
         color: $colorblanco;
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 100%;
         align-self: flex-end;    
         .nombreseccion{
             font-family: $fuentemarca;
@@ -91,22 +91,26 @@ main{
             font-weight: $bold;
         }
     }
-    .boton{
-        position: absolute;
-        top: 400px; 
-        left: 5%;
-        width: 90%;
-        height: 40px;
-        background-color: $colormedio;
-        border-radius: 40px;    
-        font-family: $fuentetextos;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 1em;
-        color: $colorblanco;
-        padding: 10px;
-        text-align: center;       
-        visibility: hidden;
+    .contenedorboton{
+        width: 100%;
+        display: flex;
+        .boton{
+            position: absolute;
+            top: 400px; 
+            left: 5%;
+            width: 90%;
+            height: 40px;
+            background-color: $colormedio;
+            border-radius: 40px;    
+            font-family: $fuentetextos;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1em;
+            color: $colorblanco;
+            padding: 10px;
+            text-align: center;       
+            visibility: hidden;
+        }
     }
 }
 
