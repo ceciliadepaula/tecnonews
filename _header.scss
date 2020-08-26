@@ -3,14 +3,13 @@ header{
     height: 60px;
     position: fixed;
     z-index: 10;
-
     display: flex;
     flex-direction: row;
-
     background-image: linear-gradient(90deg, $coloroscuro, $colormedio);
     .marcasuperior{
         align-self: flex-start;
         width: 90%;
+        margin-left: 5%;
         .logo{
             display: inline;
             h1{
@@ -19,19 +18,19 @@ header{
                 color: $colorblanco;
                 letter-spacing: 0.03em; 
                 margin: 0px;
-                padding: 10px 5%;
+                padding: 10px 0px;
                 height: 60px;
             }
         }
     }
     nav{
         align-self: flex-end;
+        margin: 0px 5%;
         .menu{
             ul{ 
                 background-color: $coloroscuro;                
                 margin: 0px;
                 padding: 0px;
-                
                 list-style: none;
                 width: 100%;
                 position: absolute;
@@ -39,9 +38,7 @@ header{
                 right: 0px;
                 overflow: hidden;
                 height: 0px;
-
                 z-index: -10;
-
                 li{
                     font-family: $fuentetextos;
                     font-weight: $semibold;
@@ -49,9 +46,7 @@ header{
                     text-align: center;    
                     margin: 10px 0px;
                     padding: 13px 0px;
-                    
                     position: relative;
-                    
                     .linknav{
                         color: $colorblanco;
                         text-decoration: none;
@@ -72,7 +67,6 @@ header{
                     }
                 }
             }
-
             input[type="checkbox"]:checked ~ ul {
                 height: 404px;
             } 
@@ -86,7 +80,7 @@ header{
                 z-index: 2;
                 position: absolute;
                 top: 0px;
-                right: 0px;              
+                right: 2%;              
             }
 
             /*---------SPAN MENÚ HAMBURGUESA-----------*/

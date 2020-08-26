@@ -31,6 +31,7 @@ header .marcasuperior {
   -ms-flex-item-align: start;
       align-self: flex-start;
   width: 90%;
+  margin-left: 5%;
 }
 
 header .marcasuperior .logo {
@@ -43,13 +44,14 @@ header .marcasuperior .logo h1 {
   color: #FFFFFF;
   letter-spacing: 0.03em;
   margin: 0px;
-  padding: 10px 5%;
+  padding: 10px 0px;
   height: 60px;
 }
 
 header nav {
   -ms-flex-item-align: end;
       align-self: flex-end;
+  margin: 0px 5%;
 }
 
 header nav .menu {
@@ -117,7 +119,7 @@ header nav .menu input {
   z-index: 2;
   position: absolute;
   top: 0px;
-  right: 0px;
+  right: 2%;
 }
 
 header nav .menu span {
@@ -528,6 +530,21 @@ aside .textootras li hr {
   background-color: #51296C;
 }
 
+main .noticia_ampliada .articuloppal .fotonoticia {
+  width: 90%;
+  margin: 90px 5% 0px 5%;
+  position: relative;
+  top: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+main .noticia_ampliada .articuloppal .infotipog .titulonoticia {
+  visibility: visible;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -690,6 +707,7 @@ footer p {
   }
   header .marcasuperior {
     width: 100%;
+    margin-left: auto;
     background-image: -webkit-gradient(linear, left top, right top, from(#51296C), to(#D74DC0));
     background-image: linear-gradient(90deg, #51296C, #D74DC0);
   }
@@ -705,6 +723,7 @@ footer p {
     background-color: #51296C;
     height: 45px;
     z-index: 1;
+    margin: 0px;
   }
   header nav .menu {
     width: 90%;
