@@ -7,7 +7,7 @@ footer{
     background-color: $coloroscuro;
 
     position: relative;
-    top: 140px;
+    top: 70px;
     box-shadow: 0 0 10px 0 rgba($colortexto, 0.8);
     p{
         font-family: $fuentetextos;
@@ -16,4 +16,11 @@ footer{
         align-self: center;
     }
 
+}
+
+@media (min-width: 900px) {
+    footer{
+        position: relative;
+        top: 140px;
+    }
 }

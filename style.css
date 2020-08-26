@@ -13,71 +13,149 @@ body {
 /*--------------COLOR-----------------*/
 header {
   width: 100%;
-  height: 100px;
+  height: 60px;
   position: fixed;
   z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-image: -webkit-gradient(linear, left top, right top, from(#51296C), to(#D74DC0));
+  background-image: linear-gradient(90deg, #51296C, #D74DC0);
+}
+
+header .marcasuperior {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 90%;
 }
 
 header .marcasuperior .logo {
   display: inline;
-  text-align: center;
 }
 
 header .marcasuperior .logo h1 {
-  background-image: -webkit-gradient(linear, left top, right top, from(#51296C), to(#D74DC0));
-  background-image: linear-gradient(90deg, #51296C, #D74DC0);
   font-family: "Russo One", sans-serif;
-  font-size: 3em;
+  font-size: 2em;
   color: #FFFFFF;
   letter-spacing: 0.03em;
   margin: 0px;
   padding: 10px 5%;
+  height: 60px;
 }
 
 header nav {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+header nav .menu {
+  /*---------CHECKBOX TRANSPARENTE-----------*/
+  /*---------SPAN MENÚ HAMBURGUESA-----------*/
+  /*---------MOVIMIENTO A CRUZ-----------*/
+}
+
+header nav .menu ul {
   background-color: #51296C;
-}
-
-header nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  margin: 0px 5%;
+  margin: 0px;
   padding: 0px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  /* flex-wrap: wrap; */
+  list-style: none;
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  overflow: hidden;
+  height: 0px;
+  z-index: -10;
 }
 
-header nav ul li {
+header nav .menu ul li {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   width: 100%;
   text-align: center;
-  padding: 7px 0px;
+  margin: 10px 0px;
+  padding: 13px 0px;
+  position: relative;
 }
 
-header nav ul li .linknav {
+header nav .menu ul li .linknav {
   color: #FFFFFF;
   text-decoration: none;
+  position: relative;
+  display: block;
 }
 
-header nav ul li:hover {
+header nav .menu ul li:hover {
   background-color: #D74DC0;
 }
 
-header nav ul li:hover .linknav {
+header nav .menu ul li:hover .linknav {
   font-weight: 700;
 }
 
-header .sombra {
+header nav .menu ul li:active {
+  background-color: #D74DC0;
+}
+
+header nav .menu ul li:active .linknav {
+  font-weight: 700;
+}
+
+header nav .menu input[type="checkbox"]:checked ~ ul {
+  height: 404px;
+}
+
+header nav .menu input {
+  display: block;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+header nav .menu span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin-bottom: 3px;
   position: relative;
-  top: -100px;
-  height: 100px;
+  bottom: 20px;
+  background: #FFFFFF;
+  z-index: 1;
+  -webkit-transform-origin: 3.75px 1px;
+          transform-origin: 3.75px 1px;
+}
+
+header nav .menu input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(2px, 1px);
+          transform: rotate(45deg) translate(2px, 1px);
+}
+
+header nav .menu input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+header nav .menu input:checked ~ span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(1px, 0px);
+          transform: rotate(-45deg) translate(1px, 0px);
+}
+
+header .sombra {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 60px;
   width: 100%;
-  background-color: blue;
   -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.8);
           box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.8);
   z-index: -5;
@@ -130,7 +208,7 @@ main {
 main .noticiasimportantes {
   margin: 0px 5% 30px 5%;
   position: relative;
-  top: 140px;
+  top: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,7 +236,7 @@ main .noticiasimportantes aside {
 main .noticiasjerarquia2 {
   margin: 0px 5% 30px 5%;
   position: relative;
-  top: 140px;
+  top: 70px;
   display: block;
   width: 90%;
 }
@@ -462,7 +540,7 @@ footer {
   height: 50px;
   background-color: #51296C;
   position: relative;
-  top: 140px;
+  top: 70px;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
 }
@@ -477,7 +555,16 @@ footer p {
 }
 
 @media (min-width: 900px) {
+  footer {
+    position: relative;
+    top: 140px;
+  }
+}
+
+@media (min-width: 900px) {
   main .noticiasimportantes {
+    position: relative;
+    top: 140px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -590,6 +677,82 @@ footer p {
   }
   .a1, .a2 {
     margin-right: 2%;
+  }
+}
+
+@media (min-width: 900px) {
+  header {
+    height: 120px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .marcasuperior {
+    width: 100%;
+    background-image: -webkit-gradient(linear, left top, right top, from(#51296C), to(#D74DC0));
+    background-image: linear-gradient(90deg, #51296C, #D74DC0);
+  }
+  header .marcasuperior .logo {
+    text-align: center;
+  }
+  header .marcasuperior .logo h1 {
+    height: unset;
+    font-size: 3em;
+  }
+  header nav {
+    width: 100%;
+    background-color: #51296C;
+    height: 45px;
+    z-index: 1;
+  }
+  header nav .menu {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header nav .menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    overflow: visible;
+  }
+  header nav .menu ul li {
+    padding: 0px;
+    margin: 0px;
+    height: 43px;
+    padding: 11px 0px;
+  }
+  header nav .menu ul li .linknav {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+  }
+  header nav .menu ul li:hover {
+    background-color: #D74DC0;
+  }
+  header nav .menu ul li:hover .linknav {
+    font-weight: 700;
+  }
+  header nav .menu span {
+    display: none;
+  }
+  header nav input#checkbox {
+    display: none;
+  }
+  header .sombra {
+    position: fixed;
+    top: 60px;
   }
 }
 /*# sourceMappingURL=style.css.map */

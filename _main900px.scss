@@ -1,6 +1,8 @@
 @media (min-width: 900px) {
     main{
         .noticiasimportantes{
+            position: relative; 
+            top: 140px;
             display: flex;
             flex-direction: row;
             width: 90%;  
